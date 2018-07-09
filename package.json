@@ -9,7 +9,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "files": [
     "generators"
@@ -25,11 +27,13 @@
     "mocha"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.22.5"
+    "yeoman-generator": "^0.23.0",
+    "snyk": "^1.88.2"
   },
   "devDependencies": {
     "mocha": "*",
     "yeoman-assert": "^2.1.1",
     "yeoman-test": "^1.1.0"
-  }
+  },
+  "snyk": true
 }
